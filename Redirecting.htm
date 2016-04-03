@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+
+<body>
+<div style='position:absolute;z-index:5;top:35%;left:35%;'>
+    <img id="imgAjax" alt="loading..." title="loading..." src="Resources/mages/loading/LoadingWalpaper.gif" 
+    style="width: 500px; height: 130px" /><br /> <br />
+ </div>
+ 
+<script type="text/javascript">
+    /* <![CDATA[ */
+    this.focus(); //focus on new window
+
+    redirect = function() {
+        var querystring = window.location.search.substring(1); //first query string
+        var page = querystring.substring(querystring.indexOf('=') + 1, querystring.length);
+        function toPage() {
+            if (page !== undefined && page.length > 1) {
+                document.write('<!--[if !IE]>--><head><meta http-equiv="REFRESH" content="1;url=' + page + '" /><\/head><!--<![endif]-->');
+                document.write(' \n <!--[if IE]>');
+                document.write(' \n <script type="text/javascript">');
+                document.write(' \n var version = parseInt(navigator.appVersion);');
+                document.write(' \n if (version>=4 || window.location.replace) {');
+                document.write(' \n window.location.replace("' + page + '");');
+                document.write(' document.images["imgAjax"].src = "Resources/mages/loading/LoadingWalpaper.gif"');
+                document.write(' \n } else');
+                document.write(' \n window.location.href="' + page + '";');
+                document.write(' \n  <\/script> <![endif]-->');
+            }
+        }
+        return {
+            begin: toPage
+        }
+    } ();
+
+    redirect.begin();
+
+    /* ]]> */
+</script>  
+</body>
+</html>

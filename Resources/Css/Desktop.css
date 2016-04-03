@@ -1,0 +1,47 @@
+﻿  #Ingresar
+{
+   margin: 0 auto;
+    }
+  
+  .start-button {
+         background-color:White;
+            background-image: url(vista_start_button.gif) !important;
+        }
+        
+
+        
+        .shortcut-icon {
+            width: 48px;
+            height: 48px;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="window.png", sizingMethod="scale");
+        }
+        Content
+        {
+           padding-left:100px;
+            }
+        
+        .icon-grid48 {
+            background-image: url(grid48x48.png) !important;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="grid48x48.png", sizingMethod="scale");
+        }
+        
+        .icon-user48 {
+            background-image: url(user48x48.png) !important;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="user48x48.png", sizingMethod="scale");
+        }
+        
+        .icon-window48 {
+            background-image: url(window48x48.png) !important;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="window48x48.png", sizingMethod="scale");
+        }
+        
+        .desktopEl {
+            position: absolute !important;
+        }
+        #contenidoajax
+        {
+            width:900px;
+            padding-top:20%;
+            padding-left: 34%;
+        margin: 0 auto;    
+        }
